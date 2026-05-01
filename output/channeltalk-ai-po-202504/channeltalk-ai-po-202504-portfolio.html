@@ -1,0 +1,1733 @@
+<!--
+  Portfolio: 채널톡 AI Product Owner
+  Generated: 2026.04.30
+  JD: channeltalk-ai-po-202504
+  Projects: carfia-content-automation, cheche-app
+  Design: design.md v3.0
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>채널톡 AI PO 포트폴리오</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+:root {
+  --bg:#FFFFFF; --ink:#111111; --ink-sub:#555555; --ink-mute:#999999;
+  --line:#E5E5E5; --surface:#F7F8FA;
+  --blue:#2B5CFF; --blue-deep:#1A3FCC; --blue-soft:#EAF0FF;
+  --yellow:#FFD500; --green:#00B26A; --red:#E63946; --orange:#F77F00;
+  --red-soft:#FFE5E7; --orange-soft:#FFF1DC; --green-soft:#E5F5EE;
+  --chart-primary:#2B5CFF; --chart-base:#C7CDD9;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:#DEDEDE;}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;margin:0 auto 32px;background:var(--bg);}
+.slide-inner{width:100%;height:100%;padding:52px 72px;display:flex;flex-direction:column;}
+
+/* Typography */
+.h1{font-size:44px;font-weight:800;line-height:1.2;letter-spacing:-0.03em;}
+.h2{font-size:28px;font-weight:700;line-height:1.3;letter-spacing:-0.02em;}
+.h3{font-size:20px;font-weight:700;line-height:1.4;}
+.h4{font-size:17px;font-weight:700;line-height:1.4;}
+.body-lg{font-size:18px;font-weight:500;line-height:1.7;}
+.body{font-size:15px;font-weight:400;line-height:1.7;}
+.small{font-size:13px;font-weight:500;line-height:1.5;}
+.xs{font-size:11px;font-weight:600;line-height:1.4;letter-spacing:0.06em;}
+
+/* Colors */
+.hl-blue{color:var(--blue);} .hl-yellow{color:var(--yellow);} .hl-red{color:var(--red);} .hl-green{color:var(--green);} .hl-orange{color:var(--orange);}
+
+/* Pills */
+.pill{display:inline-block;padding:5px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:0.02em;}
+.pill--blue{background:var(--blue);color:#fff;}
+.pill--soft{background:var(--blue-soft);color:var(--blue);}
+.pill--outline{border:1.5px solid var(--blue);color:var(--blue);background:transparent;}
+.pill--problem{background:var(--red-soft);color:var(--red);}
+.pill--success{background:var(--green-soft);color:var(--green);}
+.pill--ink{background:var(--ink);color:#fff;}
+.pill--orange{background:var(--orange-soft);color:var(--orange);}
+.pill--white{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.25);}
+
+/* Cards */
+.card{background:var(--bg);border-radius:14px;padding:20px 18px;border:1px solid var(--line);}
+.card--blue{background:var(--blue-soft);border:1.5px solid var(--blue);}
+.card--surface{background:var(--surface);border:none;}
+.card--ink{background:var(--ink);color:#fff;}
+.sub-card{background:var(--surface);border-radius:10px;padding:11px 14px;margin-top:10px;}
+.sub-card--blue{background:var(--blue-soft);}
+.sub-card--red{background:var(--red-soft);}
+.sub-card--green{background:var(--green-soft);}
+.sub-card--ink{background:var(--ink);color:#fff;}
+.card__footer{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:13px;font-weight:600;color:var(--blue);}
+
+/* Number Callout */
+.num-callout__value{font-size:52px;font-weight:800;color:var(--blue);line-height:1;letter-spacing:-0.03em;}
+.num-callout__value span{font-size:22px;margin-left:3px;}
+.num-callout__label{font-size:12px;font-weight:600;color:var(--ink-sub);margin-top:5px;}
+.num-callout__source{font-size:10px;color:var(--ink-mute);margin-top:3px;}
+.num-callout--red .num-callout__value{color:var(--red);}
+.num-callout--mute .num-callout__value{color:var(--ink-mute);}
+
+/* KPI Card */
+.kpi-card{background:var(--surface);border-radius:14px;padding:18px;text-align:center;flex:1;}
+.kpi-card__label{font-size:11px;font-weight:600;color:var(--ink-mute);letter-spacing:0.05em;}
+.kpi-card__before{font-size:13px;color:var(--ink-mute);text-decoration:line-through;margin-top:5px;}
+.kpi-card__after{font-size:30px;font-weight:800;color:var(--blue);line-height:1;margin-top:4px;}
+.kpi-card__delta{font-size:12px;font-weight:700;color:var(--green);margin-top:5px;}
+
+/* Comparison Table */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;}
+.cmp th,.cmp td{padding:11px 14px;text-align:center;font-size:13px;border-bottom:1px solid var(--line);}
+.cmp thead th{background:var(--blue);color:#fff;font-weight:700;font-size:12px;}
+.cmp thead th:first-child{border-radius:8px 0 0 0;text-align:left;}
+.cmp thead th:last-child{border-radius:0 8px 0 0;}
+.cmp tbody td:first-child{background:var(--surface);font-weight:600;text-align:left;font-size:12px;}
+.cmp__hl-col{border-left:1.5px solid var(--red)!important;border-right:1.5px solid var(--red)!important;}
+
+/* Decision Row */
+.decision-row{display:flex;gap:14px;border-left:4px solid var(--blue);padding:10px 0 10px 18px;}
+.decision-row__num{flex:0 0 26px;height:26px;border-radius:7px;background:var(--blue-soft);color:var(--blue);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;}
+.decision-row__content{flex:1;}
+.decision-row__trade{color:var(--orange);font-size:11px;font-weight:600;margin-top:3px;}
+
+/* Insight Bar */
+.insight-bar{width:100%;background:var(--blue);color:#fff;padding:16px 28px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;line-height:1.5;}
+.insight-bar--ink{background:var(--ink);}
+.insight-bar--outline{background:transparent;border:1.5px solid var(--blue);color:var(--ink);}
+
+/* Code Block */
+.code-block{background:#1A1A1A;border-radius:11px;padding:16px 18px;font-family:'SF Mono','JetBrains Mono',Consolas,monospace;}
+.code-block__title{font-size:10px;font-weight:700;color:#7BA7FF;margin-bottom:8px;letter-spacing:0.1em;}
+.code-block__body{font-size:11px;color:#fff;line-height:1.85;}
+.code-key{color:#7BA7FF;} .code-type{color:#FFD500;} .code-comment{color:#777;} .code-str{color:#98C379;} .code-func{color:#61DAFB;}
+
+/* Node + Layer */
+.node{display:inline-flex;align-items:center;justify-content:center;padding:9px 18px;border-radius:10px;font-size:12px;font-weight:700;color:#fff;min-width:110px;text-align:center;}
+.node--blue{background:var(--blue);} .node--green{background:var(--green);} .node--orange{background:var(--orange);} .node--ink{background:var(--ink);} .node--soft{background:var(--blue-soft);color:var(--blue);} .node--red{background:var(--red);}
+.layer-row{display:flex;align-items:center;gap:10px;}
+
+/* Mockup */
+.mockup-desktop{background:#E8EAF0;border-radius:9px;overflow:hidden;border:2px solid var(--line);}
+.mockup-desktop__bar{background:#D0D3DC;height:22px;display:flex;align-items:center;gap:5px;padding:0 10px;}
+.mockup-desktop__bar span{width:7px;height:7px;border-radius:50%;background:#BFC2CC;display:block;}
+.mockup-desktop__screen{min-height:110px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--ink-mute);text-align:center;padding:14px;background:#F0F2F8;line-height:1.5;}
+.mockup-phone__frame{background:#2A2A2A;border-radius:18px;padding:7px;border:2px solid #333;}
+.mockup-phone__screen{background:#F0F2F8;border-radius:12px;min-height:160px;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--ink-mute);text-align:center;padding:8px;line-height:1.4;}
+.mockup-phone__caption{font-size:11px;font-weight:700;color:var(--blue);text-align:center;margin-top:6px;}
+
+/* Section tag */
+.section-tag{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.section-tag__label{font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--ink-mute);text-transform:uppercase;white-space:nowrap;}
+.section-tag__line{flex:1;height:1px;background:var(--line);}
+
+/* AB Compare */
+.ab-compare{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;}
+.ab-box{border-radius:14px;padding:18px 22px;}
+.ab-box--rejected{background:rgba(230,57,70,0.05);border:1px solid rgba(230,57,70,0.2);}
+.ab-box--accepted{background:var(--blue-soft);border:1.5px solid var(--blue);}
+.ab-arrow{font-size:26px;color:var(--blue);font-weight:700;text-align:center;}
+
+/* Tool tag */
+.tool-tag{padding:5px 11px;border-radius:7px;font-size:11px;font-weight:600;background:var(--surface);color:var(--ink-sub);border:1px solid var(--line);}
+.tool-tag--blue{background:var(--blue-soft);color:var(--blue);border-color:rgba(43,92,255,0.2);}
+
+/* Page number */
+.page-num{font-size:11px;font-weight:600;color:rgba(255,255,255,0.4);}
+.page-num--dark{color:var(--ink-mute);}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     SLIDE 01 — 포트폴리오 커버
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--blue-deep);">
+  <div class="slide-inner" style="flex-direction:row;padding:0;">
+
+    <!-- 좌측 메인 -->
+    <div style="flex:1;padding:52px 56px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:32px;">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.4);">AI PO PORTFOLIO</span>
+          <span style="width:1px;height:12px;background:rgba(255,255,255,0.2);display:block;"></span>
+          <span style="font-size:10px;font-weight:600;color:rgba(255,255,255,0.4);">2026</span>
+        </div>
+
+        <div style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.5);margin-bottom:12px;letter-spacing:0.04em;">
+          채널톡 AI Product Owner 지원
+        </div>
+
+        <div style="font-size:52px;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.03em;margin-bottom:20px;">
+          불편함을 해결하며<br>
+          <span style="color:var(--yellow);">기억되는</span><br>
+          기획자
+        </div>
+
+        <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.65);line-height:1.7;max-width:440px;">
+          AI 가속화 시대, 결국 남는 것은 사람 사이의 유대감.<br>
+          반복의 구조를 설계하고, 사람이 더 중요한 일에<br>집중할 수 있게 만드는 제품을 만듭니다.
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+          <span class="pill pill--white">AI 제품 기획</span>
+          <span class="pill pill--white">프롬프트 엔지니어링</span>
+          <span class="pill pill--white">데이터 기반 의사결정</span>
+          <span class="pill pill--white">자동화 설계</span>
+          <span class="pill pill--white">1인 기획·개발</span>
+        </div>
+        <div style="display:flex;gap:20px;font-size:12px;color:rgba(255,255,255,0.5);">
+          <span><strong style="color:rgba(255,255,255,0.8);">Projects</strong>　2개</span>
+          <span><strong style="color:rgba(255,255,255,0.8);">Cert</strong>　SQLD</span>
+          <span><strong style="color:rgba(255,255,255,0.8);">Tools</strong>　Claude API · GA4 · Airbridge · Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 우측 프로젝트 요약 -->
+    <div style="width:360px;padding:52px 40px 52px 0;display:flex;flex-direction:column;justify-content:center;gap:20px;">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px;">
+        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.1em;margin-bottom:10px;">PROJECT 01</div>
+        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">카피아 콘텐츠<br>자동발행 시스템</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:14px;">AI 파이프라인 · 프롬프트 엔지니어링</div>
+        <div style="display:flex;gap:16px;">
+          <div style="text-align:center;">
+            <div style="font-size:26px;font-weight:800;color:var(--yellow);line-height:1;">+308%</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">월 발행량</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:26px;font-weight:800;color:var(--yellow);line-height:1;">8→35%</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">자산 콘텐츠 비중</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px;">
+        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.1em;margin-bottom:10px;">PROJECT 02</div>
+        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">체체<br>체험단 매니저 앱</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:14px;">1인 기획·개발 · B2C MVP</div>
+        <div style="display:flex;gap:16px;">
+          <div style="text-align:center;">
+            <div style="font-size:26px;font-weight:800;color:var(--yellow);line-height:1;">Phase 2</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">개발 진행 중</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:26px;font-weight:800;color:var(--yellow);line-height:1;">-90%</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">리뷰 작성 목표</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 바 -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 72px;border-top:1px solid rgba(255,255,255,0.08);">
+    <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:600;">◯◯◯</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:600;letter-spacing:0.1em;">AI PO PORTFOLIO</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 02 — 목차
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner" style="flex-direction:row;gap:80px;align-items:center;">
+
+    <!-- 좌측 -->
+    <div style="flex:0 0 auto;">
+      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;margin-bottom:12px;">PORTFOLIO</div>
+      <div class="h1" style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.04em;line-height:1;">Index<span style="color:var(--blue);">.</span></div>
+      <div style="width:48px;height:3px;background:var(--blue);margin-top:16px;"></div>
+    </div>
+
+    <!-- 우측 목차 -->
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+
+      <div style="display:flex;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);">
+        <div style="width:44px;height:44px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0;">01</div>
+        <div style="margin-left:20px;flex:1;">
+          <div class="h3">카피아 콘텐츠 자동발행 시스템</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">반복형 콘텐츠 자동화 · 프롬프트 모듈 설계 · 파이프라인 구축</div>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <span class="pill pill--soft">AI 활용</span>
+          <span class="pill pill--soft">자동화</span>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);">
+        <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--blue);flex-shrink:0;">02</div>
+        <div style="margin-left:20px;flex:1;">
+          <div class="h3">체체 — 체험단 매니저 앱</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">1인 기획·개발 · AI 리뷰 초안 · MVP 출시</div>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <span class="pill pill--soft">1인 개발</span>
+          <span class="pill pill--soft">MVP</span>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;padding:18px 0;">
+        <div style="width:44px;height:44px;border-radius:12px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--ink-sub);flex-shrink:0;">03</div>
+        <div style="margin-left:20px;flex:1;">
+          <div class="h3" style="color:var(--ink-sub);">스킬 & 도구</div>
+          <div class="small" style="color:var(--ink-mute);margin-top:3px;">기술 스택 · 자격증 · 사용 도구</div>
+        </div>
+      </div>
+
+      <!-- 핵심 키워드 -->
+      <div style="margin-top:20px;padding:18px 20px;background:var(--blue-soft);border-radius:12px;border-left:4px solid var(--blue);">
+        <div style="font-size:12px;font-weight:600;color:var(--blue);margin-bottom:6px;">JD 핵심 키워드 커버</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="pill pill--soft" style="font-size:11px;padding:4px 10px;">AI 커밋먼트</span>
+          <span class="pill pill--soft" style="font-size:11px;padding:4px 10px;">제품 오너십</span>
+          <span class="pill pill--soft" style="font-size:11px;padding:4px 10px;">데이터 기반</span>
+          <span class="pill pill--soft" style="font-size:11px;padding:4px 10px;">프롬프트 엔지니어링</span>
+          <span class="pill pill--soft" style="font-size:11px;padding:4px 10px;">지표 개선</span>
+          <span class="pill pill--soft" style="font-size:11px;padding:4px 10px;">코드 작성</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 03 — PROJECT 01 COVER
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--blue-deep);">
+  <div class="slide-inner" style="flex-direction:row;padding:0;">
+
+    <!-- 좌측 -->
+    <div style="flex:1;padding:52px 56px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.35);margin-bottom:14px;">PROJECT 01</div>
+        <div style="font-size:40px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:16px;">
+          카피아<br>콘텐츠<br><span style="color:var(--yellow);">자동발행 시스템</span>
+        </div>
+        <div style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);margin-bottom:8px;letter-spacing:0.06em;">OVERVIEW</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:400px;">
+          1인 콘텐츠 담당자 의존 구조를 벗어나<br>
+          4개 카테고리 콘텐츠를 AI 파이프라인으로 자동화.<br>
+          신뢰를 양보하지 않는 차등 자동화 설계.
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;gap:24px;font-size:12px;">
+          <div><span style="color:rgba(255,255,255,0.4);letter-spacing:0.08em;">PROCESS</span><br><strong style="color:#fff;">배경 → 문제 → 재정의 → 솔루션 → 아키텍처 → <span style="color:var(--yellow);">결과</span></strong></div>
+        </div>
+        <div style="display:flex;gap:32px;font-size:12px;color:rgba(255,255,255,0.5);">
+          <div><span style="color:rgba(255,255,255,0.4);">ROLE</span><br><strong style="color:rgba(255,255,255,0.8);">단독 기획 및 개발</strong></div>
+          <div><span style="color:rgba(255,255,255,0.4);">ORG</span><br><strong style="color:rgba(255,255,255,0.8);">Carfia</strong></div>
+          <div><span style="color:rgba(255,255,255,0.4);">TOOLS</span><br><strong style="color:rgba(255,255,255,0.8);">Python · Claude API · Gemini API</strong></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <span class="pill pill--white">AI 활용</span>
+          <span class="pill pill--white">자동화</span>
+          <span class="pill pill--white">프롬프트 엔지니어링</span>
+          <span class="pill pill--white">데이터 파이프라인</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 우측 목업 -->
+    <div style="width:480px;padding:40px 48px 40px 0;display:flex;flex-direction:column;justify-content:center;gap:12px;">
+      <div class="mockup-desktop">
+        <div class="mockup-desktop__bar"><span></span><span></span><span></span></div>
+        <div class="mockup-desktop__screen" style="min-height:200px;font-size:11px;">
+          (필요이미지: 카피아 콘텐츠 발행 파이프라인 대시보드 —<br>
+          상단 카테고리 4개 탭, 중앙 발행 상태 목록,<br>
+          우측 자동발행/검수 대기 분류)
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <div style="flex:1;background:rgba(255,255,255,0.08);border-radius:10px;padding:14px;text-align:center;border:1px solid rgba(255,255,255,0.12);">
+          <div style="font-size:26px;font-weight:800;color:var(--yellow);">102건</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">월 발행량 (Before: 25건)</div>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.08);border-radius:10px;padding:14px;text-align:center;border:1px solid rgba(255,255,255,0.12);">
+          <div style="font-size:26px;font-weight:800;color:var(--yellow);">22분</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">콘텐츠 1건 작업 (Before: 3시간)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 72px;border-top:1px solid rgba(255,255,255,0.08);">
+    <span style="font-size:11px;color:rgba(255,255,255,0.3);">CARFIA · 카피아</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.3);">AI PO PORTFOLIO</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 04 — BACKGROUND (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Background</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--soft">PROJECT 01</span>
+    </div>
+
+    <div class="h2" style="margin-bottom:6px;">
+      데이터가 없는 게 아니라,<br>
+      <span class="hl-blue">반복형 콘텐츠가 고가치의 시간을 잠식</span>하고 있었다
+    </div>
+    <div class="small" style="color:var(--ink-sub);margin-bottom:18px;">4개 카테고리 · 콘텐츠 담당자 1인 · 전체 수동 처리</div>
+
+    <!-- 3분할 차트 카드 -->
+    <div style="display:flex;gap:16px;flex:1;">
+
+      <!-- 카드 1 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;">
+        <span class="pill pill--soft" style="align-self:flex-start;margin-bottom:10px;">월 발행량 현황</span>
+        <div class="num-callout">
+          <div class="num-callout__value">25<span>건</span></div>
+          <div class="num-callout__label">월 평균 콘텐츠 발행량</div>
+          <div class="num-callout__source">출처: 카피아 내부 발행 로그</div>
+        </div>
+        <svg viewBox="0 0 260 90" style="width:100%;margin-top:auto;padding-top:12px;">
+          <rect x="20" y="20" width="60" height="60" fill="#C7CDD9" rx="4"/>
+          <text x="50" y="14" text-anchor="middle" font-size="13" font-weight="700" fill="#555" font-family="Pretendard,sans-serif">25건</text>
+          <text x="50" y="90" text-anchor="middle" font-size="10" fill="#999" font-family="Pretendard,sans-serif">현재</text>
+          <rect x="130" y="2" width="60" height="78" fill="#2B5CFF" rx="4"/>
+          <text x="160" y="0" text-anchor="middle" font-size="13" font-weight="700" fill="#2B5CFF" font-family="Pretendard,sans-serif">목표</text>
+          <text x="160" y="90" text-anchor="middle" font-size="10" fill="#999" font-family="Pretendard,sans-serif">목표치</text>
+        </svg>
+        <div class="sub-card sub-card--red">
+          <div class="xs hl-red">병목 원인</div>
+          <div class="small" style="margin-top:3px;">모든 단계 1인 수동 처리 — <strong>카테고리 4종 동시</strong></div>
+        </div>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;">
+        <span class="pill pill--problem" style="align-self:flex-start;margin-bottom:10px;">자산 콘텐츠 비중</span>
+        <div class="num-callout num-callout--red">
+          <div class="num-callout__value">8<span>%</span></div>
+          <div class="num-callout__label">전체 발행 중 자산형 콘텐츠 비중</div>
+          <div class="num-callout__source">출처: 카피아 콘텐츠 카테고리 분류</div>
+        </div>
+        <svg viewBox="0 0 260 90" style="width:100%;margin-top:auto;padding-top:12px;">
+          <circle cx="60" cy="45" r="35" fill="none" stroke="#C7CDD9" stroke-width="14"/>
+          <circle cx="60" cy="45" r="35" fill="none" stroke="#E63946" stroke-width="14"
+                  stroke-dasharray="17.6 220" stroke-dashoffset="0"
+                  transform="rotate(-90 60 45)"/>
+          <text x="60" y="41" text-anchor="middle" font-size="15" font-weight="800" fill="#E63946" font-family="Pretendard,sans-serif">8%</text>
+          <text x="60" y="55" text-anchor="middle" font-size="9" fill="#999" font-family="Pretendard,sans-serif">자산형</text>
+          <text x="140" y="35" font-size="11" fill="#555" font-family="Pretendard,sans-serif">■ 반복형 92%</text>
+          <text x="140" y="52" font-size="11" fill="#E63946" font-family="Pretendard,sans-serif">■ 자산형 8%</text>
+        </svg>
+        <div class="sub-card sub-card--red">
+          <div class="xs hl-red">핵심 문제</div>
+          <div class="small" style="margin-top:3px;">담당자: <strong>"자산 콘텐츠 쓸 시간이 없다"</strong> — SEO·신뢰 구축 불가</div>
+        </div>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;">
+        <span class="pill pill--orange" style="align-self:flex-start;margin-bottom:10px;">프로모션 갱신 지연</span>
+        <div class="num-callout" style="">
+          <div class="num-callout__value" style="color:var(--orange);">5<span>일</span></div>
+          <div class="num-callout__label">매월 1일 갱신 후 평균 지연일</div>
+          <div class="num-callout__source">출처: 카피아 내부 운영 기록</div>
+        </div>
+        <svg viewBox="0 0 260 90" style="width:100%;margin-top:auto;padding-top:12px;">
+          <rect x="10" y="30" width="160" height="18" fill="#C7CDD9" rx="3"/>
+          <text x="178" y="43" font-size="12" font-weight="700" fill="#F77F00" font-family="Pretendard,sans-serif">5일 지연</text>
+          <text x="10" y="22" font-size="10" fill="#999" font-family="Pretendard,sans-serif">기존: 수동 갱신</text>
+          <rect x="10" y="68" width="8" height="18" fill="#2B5CFF" rx="3"/>
+          <text x="26" y="81" font-size="12" font-weight="700" fill="#2B5CFF" font-family="Pretendard,sans-serif">당일</text>
+          <text x="10" y="62" font-size="10" fill="#999" font-family="Pretendard,sans-serif">목표: 자동 갱신</text>
+        </svg>
+        <div class="sub-card">
+          <div class="xs" style="color:var(--orange);">사용자 영향</div>
+          <div class="small" style="margin-top:3px;">첫 주 내내 <strong>지난달 프로모션</strong>을 보고 있는 구조</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar">
+        반복형 콘텐츠가 고가치 콘텐츠의 시간을 잠식하고 있었다 —
+        <span style="color:var(--yellow);">담당자가 바뀌어도 동일 품질로 발행되는 시스템</span>이 필요했다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 05 — PROBLEM CARDS (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Problem</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--problem">3가지 구조적 문제</span>
+    </div>
+
+    <div class="h2" style="margin-bottom:20px;">
+      발행을 막는 것은 <span class="hl-blue">시간 부족</span>이 아니라<br>
+      <span class="hl-red">자동화할 수 없는 구조</span>였다
+    </div>
+
+    <div style="display:flex;gap:16px;flex:1;">
+
+      <!-- 문제 1 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--red);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:var(--red-soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--red);">01</div>
+          <span class="pill pill--problem">시의성 붕괴</span>
+        </div>
+        <div class="h4" style="margin-bottom:8px;">프로모션 정보가<br>1주일씩 늦게 갱신</div>
+        <div class="small" style="color:var(--ink-sub);">
+          자동차 브랜드별 프로모션이 매월 1일 일제히 갱신되는데,
+          담당자 수동 처리로 인해 첫 주 내내 지난달 정보가 노출.
+        </div>
+        <div class="sub-card sub-card--red" style="margin-top:auto;">
+          <div class="xs hl-red">실제 영향</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">매월 5일 지연 · 사용자 신뢰 훼손</div>
+        </div>
+        <div class="card__footer">→ 자동 갱신 파이프라인 필요</div>
+      </div>
+
+      <!-- 문제 2 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--orange);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--orange);">02</div>
+          <span class="pill pill--orange">저작권 리스크</span>
+        </div>
+        <div class="h4" style="margin-bottom:8px;">뉴스 큐레이션<br>발행 자체를 포기</div>
+        <div class="small" style="color:var(--ink-sub);">
+          원문 복사 시 저작권 리스크,
+          직접 재작성 시 시간 부족 — 두 조건이 충돌해
+          발행을 아예 포기하는 날이 빈번했다.
+        </div>
+        <div class="sub-card" style="margin-top:auto;">
+          <div class="xs" style="color:var(--orange);">실제 영향</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">뉴스 카테고리 발행률 불안정</div>
+        </div>
+        <div class="card__footer" style="color:var(--orange);">→ AI 재작성 + 출처 검증 자동화</div>
+      </div>
+
+      <!-- 문제 3 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--blue);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--blue);">03</div>
+          <span class="pill pill--soft">단일 의존 구조</span>
+        </div>
+        <div class="h4" style="margin-bottom:8px;">담당자 부재 시<br>전체 프로세스 중단</div>
+        <div class="small" style="color:var(--ink-sub);">
+          모든 발행 판단이 담당자 1인에게 집중.
+          부재하거나 작업자가 바뀌면
+          발행 프로세스 전체가 멈추는 구조.
+        </div>
+        <div class="sub-card sub-card--blue" style="margin-top:auto;">
+          <div class="xs hl-blue">확장 한계</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">사용자 2배 증가해도 담당자 없이는 발행 불가</div>
+        </div>
+        <div class="card__footer">→ 시스템 기반 발행 구조 설계</div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar insight-bar--ink">
+        문제의 본질은 <span style="color:var(--yellow);">사람에 의존하는 발행 구조</span>였다 — 도구가 아닌 시스템이 필요했다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 06 — PROBLEM REFRAMING (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--ink);">
+  <div class="slide-inner" style="justify-content:center;">
+
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.3);margin-bottom:24px;">PROBLEM REFRAMING</div>
+
+    <div style="font-size:22px;font-weight:400;color:rgba(255,255,255,0.35);text-decoration:line-through;margin-bottom:20px;">
+      처음 받은 요청은 "콘텐츠 발행량을 늘리고 싶다"였다.
+    </div>
+
+    <div style="font-size:38px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-0.02em;margin-bottom:32px;">
+      <span style="color:var(--yellow);">발행량</span>이 부족한 게 아니라<br>
+      <span style="color:var(--yellow);">반복형이 고가치를 잠식하는</span><br>
+      구조 문제였다
+    </div>
+
+    <div class="ab-compare" style="max-width:900px;">
+      <div class="ab-box ab-box--rejected">
+        <span class="pill pill--problem">A안 · 기존 인식</span>
+        <div class="h4" style="color:#fff;margin-top:10px;">발행량 N% 증가</div>
+        <div class="small" style="color:rgba(255,255,255,0.5);margin-top:6px;">양적 KPI 목표</div>
+        <div class="small" style="color:var(--red);font-weight:600;margin-top:8px;">→ 달성해도 구조 문제 미해결</div>
+      </div>
+      <div class="ab-arrow" style="color:var(--yellow);">→</div>
+      <div class="ab-box ab-box--accepted" style="border-color:rgba(255,215,0,0.4);background:rgba(255,215,0,0.08);">
+        <span class="pill pill--blue">B안 · 재정의</span>
+        <div class="h4" style="color:#fff;margin-top:10px;">반복형을 자동화해 담당자가<br>자산형에 집중하게</div>
+        <div class="small" style="color:rgba(255,255,255,0.6);margin-top:6px;">카테고리별 비중 변화가 추적 지표</div>
+        <div class="small" style="color:var(--yellow);font-weight:600;margin-top:8px;">→ 구조 자체를 바꾸는 설계</div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;padding:18px 24px;border-left:3px solid var(--yellow);background:rgba(255,215,0,0.06);border-radius:0 10px 10px 0;max-width:700px;">
+      <div class="small" style="color:rgba(255,255,255,0.55);line-height:1.7;">
+        이 재정의 덕분에 단순 양적 KPI가 아닌 <strong style="color:#fff;">카테고리별 포트폴리오 비중 변화</strong>를
+        추적 지표로 가져갈 수 있었다.<br>
+        "사용자가 2배가 되어도, 담당자가 바뀌어도, <span style="color:var(--yellow);">동일 품질로 발행이 유지되는 시스템</span>"이 목표였다.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SLIDE 07 — SOLUTION DECISIONS (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Solution</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--blue">핵심 설계 결정 3가지</span>
+    </div>
+    <div class="h2" style="margin-bottom:20px;">
+      자동화 비율이 아닌 <span class="hl-blue">신뢰 구조</span>를 먼저 설계했다
+    </div>
+
+    <div style="display:flex;gap:16px;flex:1;">
+
+      <!-- 결정 1 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--blue);">
+        <span class="pill pill--blue" style="align-self:flex-start;margin-bottom:10px;">결정 01 · 프롬프트 구조</span>
+        <div class="h4" style="margin-bottom:8px;">카테고리별 분리 프롬프트<br>(통합 프롬프트 대신)</div>
+        <div class="small" style="color:var(--ink-sub);">공통 지침(브랜드 톤·페르소나·금지사항) + 카테고리별 모듈 구조로 분리.</div>
+        <div class="sub-card" style="background:rgba(230,57,70,0.05);border:1px solid rgba(230,57,70,0.15);">
+          <div class="xs hl-red">고려한 대안</div>
+          <div class="small" style="margin-top:3px;text-decoration:line-through;color:var(--ink-mute);">통합 단일 프롬프트</div>
+          <div class="small" style="color:var(--red);">→ 카테고리별 톤·CTA가 뭉개짐</div>
+        </div>
+        <div class="sub-card sub-card--blue">
+          <div class="xs hl-blue">선택한 방식</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">모듈형 분리 → 브랜드 일관성 + 카테고리 특화 동시 확보</div>
+        </div>
+        <div class="card__footer">→ 카테고리별 전환 목표 개별 최적화</div>
+      </div>
+
+      <!-- 결정 2 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--orange);">
+        <span class="pill pill--orange" style="align-self:flex-start;margin-bottom:10px;">결정 02 · 자동화 범위</span>
+        <div class="h4" style="margin-bottom:8px;">카테고리별 차등 자동화<br>(일괄 자동화 대신)</div>
+        <div class="small" style="color:var(--ink-sub);">금융 도메인 수치 신뢰를 최우선으로 카테고리마다 게이트를 다르게 설계.</div>
+        <div class="sub-card sub-card--red">
+          <div class="xs hl-red">프로모션</div>
+          <div class="small" style="margin-top:2px;font-weight:600;">무조건 사람 검수 — 수치 오류 시 신뢰 훼손</div>
+        </div>
+        <div class="sub-card sub-card--green">
+          <div class="xs hl-green">뉴스 요약</div>
+          <div class="small" style="margin-top:2px;font-weight:600;">출처 검증 완료 시 자동발행</div>
+        </div>
+        <div class="card__footer" style="color:var(--orange);">트레이드오프: 자동화율 일부 희생 → 신뢰 확보</div>
+      </div>
+
+      <!-- 결정 3 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--green);">
+        <span class="pill pill--success" style="align-self:flex-start;margin-bottom:10px;">결정 03 · 환각 방지</span>
+        <div class="h4" style="margin-bottom:8px;">파이프라인 레벨 검증<br>(프롬프트 지시 대신)</div>
+        <div class="small" style="color:var(--ink-sub);">출처 URL 없으면 수치 자체를 출력 못하도록 후처리 검증 단계를 파이프라인에 추가.</div>
+        <div class="sub-card">
+          <div class="xs" style="color:var(--ink-sub);">구현 방식</div>
+          <div class="small" style="margin-top:3px;">정규식 + 출처 URL 매칭 → 검증 실패 시 Draft 전환</div>
+        </div>
+        <div class="sub-card sub-card--blue">
+          <div class="xs hl-blue">원칙</div>
+          <div class="small" style="margin-top:2px;font-weight:600;">"프롬프트로 설득하지 않는다 — 구조로 막는다"</div>
+        </div>
+        <div class="card__footer">→ 환각에 의한 오정보 발행 차단</div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar insight-bar--outline">
+        출력은 항상 정형 JSON 스키마 · 신뢰가 의심되면 사람 게이트 · 프롬프트는 코드처럼 버저닝
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 08 — DATA ARCHITECTURE (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Data Architecture</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--ink">AI 파이프라인 구조</span>
+    </div>
+    <div class="h2" style="margin-bottom:16px;">
+      <span class="hl-blue">3단계 검증</span>이 내장된 자동발행 파이프라인
+    </div>
+
+    <div style="display:flex;gap:20px;flex:1;">
+
+      <!-- 좌측: 코드 블록 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;">
+        <div class="code-block">
+          <div class="code-block__title">PROMPT MODULE STRUCTURE</div>
+          <div class="code-block__body">
+            <div><span class="code-comment"># 공통 시스템 프롬프트</span></div>
+            <div><span class="code-key">system_prompt</span> = {</div>
+            <div>&nbsp;&nbsp;<span class="code-str">"brand_tone"</span>: <span class="code-str">"딜러보다 내 편"</span>,</div>
+            <div>&nbsp;&nbsp;<span class="code-str">"persona"</span>: <span class="code-str">"자동차 전문 에디터"</span>,</div>
+            <div>&nbsp;&nbsp;<span class="code-str">"forbidden"</span>: [<span class="code-str">"경쟁사 직접 비교"</span>]</div>
+            <div>}</div>
+            <div>&nbsp;</div>
+            <div><span class="code-comment"># 카테고리별 모듈 분기</span></div>
+            <div><span class="code-key">category_modules</span> = {</div>
+            <div>&nbsp;&nbsp;<span class="code-str">"news"</span>: <span class="code-func">NewsModule</span>(<span class="code-str">auto_publish=True</span>),</div>
+            <div>&nbsp;&nbsp;<span class="code-str">"promo"</span>: <span class="code-func">PromoModule</span>(<span class="code-str">gate="human"</span>),</div>
+            <div>&nbsp;&nbsp;<span class="code-str">"asset"</span>: <span class="code-func">AssetModule</span>(<span class="code-str">gate="draft"</span>),</div>
+            <div>}</div>
+          </div>
+        </div>
+        <div class="code-block">
+          <div class="code-block__title">HALLUCINATION GUARD</div>
+          <div class="code-block__body">
+            <div><span class="code-key">def</span> <span class="code-func">validate_output</span>(text, sources):</div>
+            <div>&nbsp;&nbsp;numbers = <span class="code-func">re.findall</span>(<span class="code-str">r'\d+'</span>, text)</div>
+            <div>&nbsp;&nbsp;<span class="code-key">for</span> num <span class="code-key">in</span> numbers:</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">if not</span> <span class="code-func">match_source</span>(num, sources):</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">return</span> <span class="code-str">"DRAFT"</span>  <span class="code-comment"># 자동발행 차단</span></div>
+            <div>&nbsp;&nbsp;<span class="code-key">return</span> <span class="code-str">"APPROVED"</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 우측: 파이프라인 다이어그램 -->
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px;">
+        <div class="layer-row">
+          <div class="node node--ink" style="width:140px;">원본 데이터 수집</div>
+          <div class="small" style="color:var(--ink-sub);">RSS · 브랜드 공식 채널</div>
+        </div>
+        <div style="font-size:18px;color:var(--ink-mute);margin-left:54px;">↓</div>
+        <div class="layer-row">
+          <div class="node node--blue" style="width:140px;">카테고리 분기</div>
+          <div class="small" style="color:var(--ink-sub);">뉴스 / 프로모션 / 자산 / 후기</div>
+        </div>
+        <div style="font-size:18px;color:var(--ink-mute);margin-left:54px;">↓</div>
+        <div class="layer-row">
+          <div class="node node--blue" style="width:140px;">프롬프트 모듈</div>
+          <div class="small" style="color:var(--ink-sub);">공통 시스템 + 카테고리 모듈</div>
+        </div>
+        <div style="font-size:18px;color:var(--ink-mute);margin-left:54px;">↓</div>
+        <div class="layer-row">
+          <div class="node node--orange" style="width:140px;">후처리 검증</div>
+          <div class="small" style="color:var(--ink-sub);">정규식 + 출처 매칭 (환각 차단)</div>
+        </div>
+        <div style="font-size:18px;color:var(--ink-mute);margin-left:54px;">↓</div>
+        <div style="display:flex;gap:8px;">
+          <div class="node node--green" style="width:110px;font-size:11px;">자동발행</div>
+          <div class="node node--red" style="width:110px;font-size:11px;">사람 검수</div>
+          <div class="node node--soft" style="width:110px;font-size:11px;">Draft 보관</div>
+        </div>
+        <div style="margin-top:10px;padding:14px 16px;background:var(--blue-soft);border-radius:10px;border:1.5px solid var(--blue);">
+          <div class="xs hl-blue" style="margin-bottom:4px;">EXPANSION · 확장성 설계</div>
+          <div class="small">카테고리 추가 시 모듈만 추가 — 공통 구조 변경 없음<br>프롬프트는 코드처럼 버저닝 · 배포 = 시작점</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 09 — DECISION LOG (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Decision Log</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--ink">AI 활용 · PO 판단</span>
+    </div>
+    <div class="h2" style="margin-bottom:18px;">
+      요구사항을 그대로 받지 않고 <span class="hl-blue">매 판단을 기록</span>했다
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;">
+      <div class="decision-row">
+        <div class="decision-row__num">01</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">문제 재정의 — "발행량"이 아닌 "구조" 문제</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">"발행량 증가" 요청을 <span class="hl-blue">카테고리별 비중 변화</span>라는 구조적 지표로 재정의</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">02</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">신뢰 vs 자동화 — 신뢰를 택했다</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">프로모션은 자동발행하지 않고 <span class="hl-blue">사람 검수 강제</span> — 금융 수치 오류 리스크 차단</div>
+          <div class="decision-row__trade">트레이드오프: 자동화율 일부 희생</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">03</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">환각 방지 — 프롬프트가 아닌 파이프라인</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">출처 매칭 검증을 <span class="hl-blue">후처리 단계</span>로 분리 — 지시로 막지 않고 구조로 막는다</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">04</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">통합 프롬프트 대신 모듈형 구조</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">카테고리별 전환 목표가 달라 <span class="hl-blue">톤·CTA가 뭉개지면 안 된다</span>고 판단</div>
+          <div class="decision-row__trade">트레이드오프: 초기 설계 비용 증가</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">05</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">완전 자동발행을 일부러 만들지 않음</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">사람 게이트를 <span class="hl-blue">"신뢰 보증 장치"</span>로 설계에 포함 — 자동화 ≠ 무인화</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">06</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">프롬프트 버저닝 — AI 시스템은 배포가 시작</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">출시 후 프롬프트를 <span class="hl-blue">코드처럼 수정·버저닝</span> — 지속 개선 루프 구축</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar">
+        모든 결정에는 이유가 있다 — <span style="color:var(--yellow);">트레이드오프를 명시하는 것</span>이 PO의 책임이다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 10 — OUTCOME (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Outcomes</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--success">측정된 결과</span>
+    </div>
+    <div class="h2" style="margin-bottom:14px;">
+      발행량 <span class="hl-blue">+308%</span>는 결과일 뿐 —<br>
+      진짜 변화는 <span class="hl-blue">구조가 바뀐 것</span>이다
+    </div>
+
+    <!-- KPI 카드 4개 -->
+    <div style="display:flex;gap:12px;margin-bottom:14px;">
+      <div class="kpi-card">
+        <div class="kpi-card__label">월 발행량</div>
+        <div class="kpi-card__before">25건</div>
+        <div class="kpi-card__after">102건</div>
+        <div class="kpi-card__delta">+308%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__label">콘텐츠 1건 작업 시간</div>
+        <div class="kpi-card__before">3시간</div>
+        <div class="kpi-card__after">22분</div>
+        <div class="kpi-card__delta">-88%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__label">자산 콘텐츠 비중</div>
+        <div class="kpi-card__before">8%</div>
+        <div class="kpi-card__after">35%</div>
+        <div class="kpi-card__delta">+27%p</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__label">프로모션 갱신 지연</div>
+        <div class="kpi-card__before">매월 5일</div>
+        <div class="kpi-card__after" style="font-size:22px;">당일</div>
+        <div class="kpi-card__delta">시의성 확보</div>
+      </div>
+    </div>
+
+    <!-- 비교표 -->
+    <div style="flex:1;overflow:hidden;">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th style="text-align:left;">지표</th>
+            <th>Before</th>
+            <th class="cmp__hl-col">After</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>월 발행량</td>
+            <td>25건</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">102건</strong></td>
+            <td>+308%</td>
+          </tr>
+          <tr>
+            <td>콘텐츠 1건 작업 시간</td>
+            <td>3시간</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">22분</strong></td>
+            <td>검수 시간만 남음</td>
+          </tr>
+          <tr>
+            <td>자산 콘텐츠 비중</td>
+            <td>8%</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">35%</strong></td>
+            <td>담당자 시간 회수 직접 증거</td>
+          </tr>
+          <tr>
+            <td>프로모션 갱신 지연</td>
+            <td>매월 5일</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">당일</strong></td>
+            <td>시의성 확보</td>
+          </tr>
+          <tr>
+            <td>카테고리별 톤 일관성</td>
+            <td>담당자 컨디션 의존</td>
+            <td class="cmp__hl-col"><strong class="hl-green">시스템 보장</strong></td>
+            <td>정성 지표</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 정성 변화 카드 -->
+    <div style="display:flex;gap:10px;margin-top:12px;">
+      <div class="card card--blue" style="flex:1;padding:12px 14px;">
+        <div class="xs hl-blue" style="margin-bottom:4px;">구조적 변화 1</div>
+        <div class="small" style="font-weight:600;">담당자 부재·교체 시에도 발행 프로세스 중단 없음</div>
+      </div>
+      <div class="card card--blue" style="flex:1;padding:12px 14px;">
+        <div class="xs hl-blue" style="margin-bottom:4px;">구조적 변화 2</div>
+        <div class="small" style="font-weight:600;">담당자가 자산 콘텐츠·전략 기획에 시간을 쓸 수 있게 됨</div>
+      </div>
+      <div class="card card--blue" style="flex:1;padding:12px 14px;">
+        <div class="xs hl-blue" style="margin-bottom:4px;">구조적 변화 3</div>
+        <div class="small" style="font-weight:600;">"딜러보다 내 편" 브랜드 톤이 작업자 무관하게 일관 유지</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 11 — LIMITS & NEXT STEPS (카피아)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Limits &amp; Next Steps</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--soft">PROJECT 01 마무리</span>
+    </div>
+    <div class="h2" style="margin-bottom:20px;">
+      지금도 <span class="hl-red">남아있는 한계</span>와<br>
+      <span class="hl-blue">다음에 풀고 싶은 것</span>
+    </div>
+
+    <div style="display:flex;gap:20px;flex:1;">
+
+      <!-- 좌측: 한계 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <span class="pill pill--problem" style="align-self:flex-start;">현재 한계</span>
+        <div style="border-left:3px solid var(--red);padding:12px 16px;background:var(--red-soft);border-radius:0 10px 10px 0;">
+          <div class="h4" style="font-size:14px;color:var(--red);">프로모션 — 사람 검수 의존도 높음</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">정형 데이터 소스가 없어 수치 검증을 사람에게 의존. 검수 게이트가 병목으로 남아있다.</div>
+        </div>
+        <div style="border-left:3px solid var(--orange);padding:12px 16px;background:var(--orange-soft);border-radius:0 10px 10px 0;">
+          <div class="h4" style="font-size:14px;color:var(--orange);">품질 개선 루프가 수동</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">주간 스팟체크 → 프롬프트 수정이라는 수동 사이클에 의존. 자동 회귀 테스트 없음.</div>
+        </div>
+      </div>
+
+      <!-- 우측: 개선 방향 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <span class="pill pill--blue" style="align-self:flex-start;">개선하고 싶은 방향</span>
+        <div class="card card--blue" style="padding:14px 16px;">
+          <div class="h4" style="font-size:14px;color:var(--blue);">카테고리별 Eval Set 구축</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">프롬프트 변경 시 회귀 테스트 자동화 — AI 시스템의 배포 파이프라인화</div>
+        </div>
+        <div class="card card--blue" style="padding:14px 16px;">
+          <div class="h4" style="font-size:14px;color:var(--blue);">프로모션 데이터 소스 정형화</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">정형 입력 전환 → 검수 게이트 축소 → 자동발행 비율 확대</div>
+        </div>
+        <div class="card card--blue" style="padding:14px 16px;">
+          <div class="h4" style="font-size:14px;color:var(--blue);">사용자 행동 → 프롬프트 개선 루프</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">체류·전환 데이터를 프롬프트 개선에 자동 반영하는 폐쇄형 피드백 루프</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar">
+        <span style="color:var(--yellow);">배포는 시작점</span> — AI 시스템은 출시 후에도 계속 학습·개선되어야 한다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 12 — PROJECT 02 COVER (체체)
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--blue-deep);">
+  <div class="slide-inner" style="flex-direction:row;padding:0;">
+
+    <!-- 좌측 -->
+    <div style="flex:1;padding:52px 56px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.35);margin-bottom:14px;">PROJECT 02</div>
+        <div style="font-size:40px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:16px;">
+          체체<br><span style="color:var(--yellow);">체험단 매니저 앱</span>
+        </div>
+        <div style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);margin-bottom:8px;letter-spacing:0.06em;">OVERVIEW</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:400px;">
+          분산된 체험단 관리를 하나로 집약하고,<br>
+          AI 리뷰 초안으로 콘텐츠 발행 부담 90% 해소.<br>
+          1인 기획·개발·커뮤니티 병행 MVP 출시.
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;gap:32px;font-size:12px;color:rgba(255,255,255,0.5);">
+          <div><span style="color:rgba(255,255,255,0.4);">ROLE</span><br><strong style="color:rgba(255,255,255,0.8);">단독 기획 · 개발 · 디자인</strong></div>
+          <div><span style="color:rgba(255,255,255,0.4);">PERIOD</span><br><strong style="color:rgba(255,255,255,0.8);">2026.04 – 현재</strong></div>
+          <div><span style="color:rgba(255,255,255,0.4);">TOOLS</span><br><strong style="color:rgba(255,255,255,0.8);">Next.js · Supabase · Claude API · Vercel</strong></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <span class="pill pill--white">1인 개발</span>
+          <span class="pill pill--white">AI 활용</span>
+          <span class="pill pill--white">B2C MVP</span>
+          <span class="pill pill--white">사용자 리서치</span>
+        </div>
+        <div style="margin-top:8px;padding:10px 14px;background:rgba(255,215,0,0.1);border-radius:8px;border:1px solid rgba(255,215,0,0.2);">
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);">Phase 0~2 완료 · Phase 3~6 개발 중 · 베타 론칭 준비</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 우측: 폰 목업 3개 -->
+    <div style="width:460px;padding:40px 44px 40px 0;display:flex;align-items:center;gap:14px;">
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame">
+          <div class="mockup-phone__screen" style="min-height:220px;">(필요이미지: 캘린더 화면 — 월간 캘린더, 체험단 일정 마커)</div>
+        </div>
+        <div class="mockup-phone__caption">캘린더</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame">
+          <div class="mockup-phone__screen" style="min-height:220px;">(필요이미지: 체험 상세 — 6단계 상태, 가이드라인, 마감일)</div>
+        </div>
+        <div class="mockup-phone__caption">상세</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame">
+          <div class="mockup-phone__screen" style="min-height:220px;">(필요이미지: AI 리뷰 초안 화면 — 생성 버튼, 초안 텍스트)</div>
+        </div>
+        <div class="mockup-phone__caption">AI 초안</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 72px;border-top:1px solid rgba(255,255,255,0.08);">
+    <span style="font-size:11px;color:rgba(255,255,255,0.3);">개인 프로젝트 · 체체</span>
+    <span style="font-size:11px;color:rgba(255,255,255,0.3);">AI PO PORTFOLIO</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 13 — BACKGROUND (체체)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Background</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--soft">PROJECT 02</span>
+    </div>
+    <div class="h2" style="margin-bottom:6px;">
+      체험단 크리에이터는 <span class="hl-blue">매니저 없이</span><br>
+      플랫폼 3개, 리뷰 마감, 촬영 항목을 혼자 감당한다
+    </div>
+    <div class="small" style="color:var(--ink-sub);margin-bottom:16px;">타겟: 월 3~10개 체험단 · 24~34세 여성 크리에이터</div>
+
+    <div style="display:flex;gap:16px;flex:1;">
+
+      <!-- 카드 1 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;">
+        <span class="pill pill--soft" style="align-self:flex-start;margin-bottom:10px;">플랫폼 분산</span>
+        <div class="num-callout">
+          <div class="num-callout__value">3<span>개+</span></div>
+          <div class="num-callout__label">동시 관리 플랫폼 수</div>
+          <div class="num-callout__source">레뷰 · 강남맛집 · 미블 등</div>
+        </div>
+        <svg viewBox="0 0 260 80" style="width:100%;margin-top:auto;padding-top:10px;">
+          <rect x="10" y="10" width="60" height="60" rx="8" fill="#EAF0FF" stroke="#2B5CFF" stroke-width="1.5"/>
+          <text x="40" y="40" text-anchor="middle" font-size="10" fill="#2B5CFF" font-family="Pretendard,sans-serif" font-weight="700">레뷰</text>
+          <rect x="100" y="10" width="60" height="60" rx="8" fill="#EAF0FF" stroke="#2B5CFF" stroke-width="1.5"/>
+          <text x="130" y="40" text-anchor="middle" font-size="10" fill="#2B5CFF" font-family="Pretendard,sans-serif" font-weight="700">강남맛집</text>
+          <rect x="190" y="10" width="60" height="60" rx="8" fill="#EAF0FF" stroke="#2B5CFF" stroke-width="1.5"/>
+          <text x="220" y="40" text-anchor="middle" font-size="10" fill="#2B5CFF" font-family="Pretendard,sans-serif" font-weight="700">미블</text>
+        </svg>
+        <div class="sub-card sub-card--red">
+          <div class="xs hl-red">실제 문제</div>
+          <div class="small" style="margin-top:3px;">선정 알림·가이드라인이 플랫폼마다 분산 — 통합 관리 불가</div>
+        </div>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;">
+        <span class="pill pill--problem" style="align-self:flex-start;margin-bottom:10px;">수기 입력 부담</span>
+        <div class="num-callout num-callout--red">
+          <div class="num-callout__value">전부<span>수기</span></div>
+          <div class="num-callout__label">체험단 내역 기록 방식</div>
+          <div class="num-callout__source">노션에 직접 입력</div>
+        </div>
+        <svg viewBox="0 0 260 80" style="width:100%;margin-top:auto;padding-top:10px;">
+          <rect x="10" y="25" width="200" height="18" fill="#C7CDD9" rx="3"/>
+          <text x="218" y="38" font-size="11" font-weight="700" fill="#E63946" font-family="Pretendard,sans-serif">수기 입력</text>
+          <text x="10" y="18" font-size="10" fill="#999" font-family="Pretendard,sans-serif">현재: 노션 수동 기록</text>
+          <rect x="10" y="60" width="14" height="18" fill="#2B5CFF" rx="3"/>
+          <text x="32" y="73" font-size="11" font-weight="700" fill="#2B5CFF" font-family="Pretendard,sans-serif">30초 자동완성 (목표)</text>
+        </svg>
+        <div class="sub-card">
+          <div class="xs" style="color:var(--ink-sub);">목표</div>
+          <div class="small" style="margin-top:3px;">URL 붙여넣기 → <strong>체험명·마감일·가이드라인 30초 자동완성</strong></div>
+        </div>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="card" style="flex:1;display:flex;flex-direction:column;">
+        <span class="pill pill--orange" style="align-self:flex-start;margin-bottom:10px;">리뷰 작성 부담</span>
+        <div class="num-callout" style="">
+          <div class="num-callout__value" style="color:var(--orange);">1~2<span>시간</span></div>
+          <div class="num-callout__label">리뷰 1건 작성 소요 시간</div>
+          <div class="num-callout__source">월 3~10회 반복</div>
+        </div>
+        <svg viewBox="0 0 260 80" style="width:100%;margin-top:auto;padding-top:10px;">
+          <rect x="10" y="15" width="180" height="22" fill="#C7CDD9" rx="4"/>
+          <text x="100" y="30" text-anchor="middle" font-size="11" fill="#555" font-family="Pretendard,sans-serif">1~2시간 (현재)</text>
+          <rect x="10" y="52" width="18" height="22" fill="#2B5CFF" rx="4"/>
+          <text x="36" y="67" font-size="11" fill="#2B5CFF" font-family="Pretendard,sans-serif" font-weight="700">30초 (AI 초안 목표)</text>
+        </svg>
+        <div class="sub-card sub-card--blue">
+          <div class="xs hl-blue">솔루션</div>
+          <div class="small" style="margin-top:3px;">AI 리뷰 초안 생성 → <strong>작성 시간 90% 단축</strong> 목표</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar">
+        월 3~10개 체험단을 소화하는 크리에이터에게 이 구조는 <span style="color:var(--yellow);">확장 불가능</span>했다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 14 — PROBLEM CARDS (체체)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Problem</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--problem">3가지 구조적 문제</span>
+    </div>
+    <div class="h2" style="margin-bottom:20px;">
+      도구가 없는 게 아니라<br>
+      <span class="hl-red">여러 도구를 쓰는 것 자체</span>가 문제였다
+    </div>
+
+    <div style="display:flex;gap:16px;flex:1;">
+
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--red);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:var(--red-soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--red);">01</div>
+          <span class="pill pill--problem">정보 분산</span>
+        </div>
+        <div class="h4" style="margin-bottom:8px;">선정 알림·가이드라인이<br>플랫폼마다 따로 존재</div>
+        <div class="small" style="color:var(--ink-sub);">체험 전후 참고해야 할 정보(방문 시간, 촬영 항목, 해시태그, 마감일)가 플랫폼마다 다른 형식으로 분산.</div>
+        <div class="sub-card sub-card--red" style="margin-top:auto;">
+          <div class="xs hl-red">실제 영향</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">플랫폼마다 별도 접속 → 누락 발생 → 선정 취소 리스크</div>
+        </div>
+        <div class="card__footer">→ 단일 앱으로 통합 집약</div>
+      </div>
+
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--orange);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--orange);">02</div>
+          <span class="pill pill--orange">수기 기록 반복</span>
+        </div>
+        <div class="h4" style="margin-bottom:8px;">모든 체험단 내역을<br>노션에 수기로 입력</div>
+        <div class="small" style="color:var(--ink-sub);">선정 공고 URL을 보고 체험명·마감일·장소·가이드라인을 하나씩 복사 붙여넣기. 매 체험마다 반복.</div>
+        <div class="sub-card" style="margin-top:auto;">
+          <div class="xs" style="color:var(--orange);">실제 영향</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">입력 오류 · 누락 · 시간 낭비 — 확장 불가능한 구조</div>
+        </div>
+        <div class="card__footer" style="color:var(--orange);">→ URL 파싱 자동완성</div>
+      </div>
+
+      <div class="card" style="flex:1;display:flex;flex-direction:column;border-top:3px solid var(--blue);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:8px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--blue);">03</div>
+          <span class="pill pill--soft">리뷰 작성 부담</span>
+        </div>
+        <div class="h4" style="margin-bottom:8px;">리뷰 1건에<br>매번 1~2시간 소요</div>
+        <div class="small" style="color:var(--ink-sub);">체험 경험을 글로 옮기는 것 자체가 크리에이터의 가장 큰 부담. 포맷·어조·해시태그를 매번 처음부터 고민.</div>
+        <div class="sub-card sub-card--blue" style="margin-top:auto;">
+          <div class="xs hl-blue">확장 한계</div>
+          <div class="small" style="margin-top:3px;font-weight:600;">월 10개 소화 시 리뷰만 10~20시간 소요 → 포기</div>
+        </div>
+        <div class="card__footer">→ AI 리뷰 초안 30초 생성</div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar insight-bar--ink">
+        콘텐츠 발행의 부담이 너무 커서 <span style="color:var(--yellow);">활동 자체를 포기</span>하게 만드는 구조였다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 15 — PROBLEM REFRAMING (체체)
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--ink);">
+  <div class="slide-inner" style="justify-content:center;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.3);margin-bottom:24px;">PROBLEM REFRAMING</div>
+
+    <div style="font-size:20px;font-weight:400;color:rgba(255,255,255,0.35);text-decoration:line-through;margin-bottom:20px;">
+      처음 의도는 "체험단 일정 관리의 분산을 집약화하는 것"이었다.
+    </div>
+
+    <div style="font-size:36px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-0.02em;margin-bottom:32px;">
+      일정 관리는 수단이었다.<br>
+      목적은 <span style="color:var(--yellow);">콘텐츠 발행 부담 자체</span>를<br>
+      해소하는 것이었다
+    </div>
+
+    <div style="max-width:860px;">
+      <div class="ab-compare">
+        <div class="ab-box ab-box--rejected">
+          <span class="pill pill--problem">A안 · 기존 방향</span>
+          <div class="h4" style="color:#fff;margin-top:10px;">일정 관리 집약화</div>
+          <div class="small" style="color:rgba(255,255,255,0.5);margin-top:6px;">URL 파싱 + 캘린더</div>
+          <div class="small" style="color:var(--red);font-weight:600;margin-top:8px;">→ URL 파싱 막히면 앱 중단</div>
+        </div>
+        <div class="ab-arrow" style="color:var(--yellow);">→</div>
+        <div class="ab-box" style="background:rgba(255,215,0,0.08);border:1.5px solid rgba(255,215,0,0.4);border-radius:14px;padding:18px 22px;">
+          <span class="pill pill--blue">B안 · 재정의</span>
+          <div class="h4" style="color:#fff;margin-top:10px;">콘텐츠 발행 부담 해소</div>
+          <div class="small" style="color:rgba(255,255,255,0.6);margin-top:6px;">AI 리뷰 초안을 핵심으로</div>
+          <div class="small" style="color:var(--yellow);font-weight:600;margin-top:8px;">→ URL 파싱 없이도 핵심 가치 전달 가능</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;padding:18px 24px;border-left:3px solid var(--yellow);background:rgba(255,215,0,0.06);border-radius:0 10px 10px 0;max-width:720px;">
+      <div class="small" style="color:rgba(255,255,255,0.6);line-height:1.7;">
+        핵심 기능 구현이 막혔을 때 포기가 아닌 <strong style="color:#fff;">본질 재정의</strong>로 대응했다.<br>
+        기능이 아닌 <span style="color:var(--yellow);">목적 중심으로 방향을 잡는 것</span>이 PO의 역할이라고 생각한다.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 16 — SOLUTION DECISIONS (체체)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Solution</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--blue">핵심 설계 결정 4가지</span>
+    </div>
+    <div class="h2" style="margin-bottom:18px;">
+      완성도보다 <span class="hl-blue">빠른 검증</span>을 선택했다
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;">
+
+      <div class="card" style="border-top:3px solid var(--blue);">
+        <span class="pill pill--blue" style="align-self:flex-start;margin-bottom:10px;">결정 01 · 기술 스택</span>
+        <div class="h4" style="margin-bottom:8px;">Next.js 선택 (네이티브 앱 대신)</div>
+        <div class="small" style="color:var(--ink-sub);">빠른 베타 출시를 최우선으로 Next.js 선택. 이후 앱 리패키징 경로 확인으로 초기 판단이 효율적 경로였음을 검증.</div>
+        <div class="sub-card sub-card--blue" style="margin-top:10px;">
+          <div class="small" style="font-weight:600;">결과: Next.js → 앱 리패키징 경로 확인, 전환 작업 예정</div>
+        </div>
+        <div class="card__footer" style="color:var(--orange);">트레이드오프: 초기 네이티브 경험 희생</div>
+      </div>
+
+      <div class="card" style="border-top:3px solid var(--orange);">
+        <span class="pill pill--orange" style="align-self:flex-start;margin-bottom:10px;">결정 02 · 타겟</span>
+        <div class="h4" style="margin-bottom:8px;">2030 여성 크리에이터로 좁히기</div>
+        <div class="small" style="color:var(--ink-sub);">반응이 가장 빠르고 직접적인 그룹. 이탈률을 감수하더라도 빠른 피드백 수용이 제품 개선 속도를 높인다고 판단.</div>
+        <div class="sub-card" style="margin-top:10px;">
+          <div class="small" style="font-weight:600;">좁은 타겟 + 빠른 피드백 = 제품 개선 가속</div>
+        </div>
+        <div class="card__footer" style="color:var(--orange);">트레이드오프: 초기 이탈률 감수</div>
+      </div>
+
+      <div class="card" style="border-top:3px solid var(--green);">
+        <span class="pill pill--success" style="align-self:flex-start;margin-bottom:10px;">결정 03 · 채널</span>
+        <div class="h4" style="margin-bottom:8px;">스레드 채널을 앱 개발과 병행</div>
+        <div class="small" style="color:var(--ink-sub);">론칭 당일 사용자가 없는 상황을 방지하기 위해 개발 중에 타겟 유저와 라포를 형성하는 커뮤니티 채널을 먼저 구축.</div>
+        <div class="sub-card sub-card--green" style="margin-top:10px;">
+          <div class="small" style="font-weight:600;">제품 + 유저 채널을 동시에 키우는 구조</div>
+        </div>
+      </div>
+
+      <div class="card" style="border-top:3px solid var(--blue);">
+        <span class="pill pill--soft" style="align-self:flex-start;margin-bottom:10px;">결정 04 · 방향 전환</span>
+        <div class="h4" style="margin-bottom:8px;">URL 파싱 한계 → 본질 재정의</div>
+        <div class="small" style="color:var(--ink-sub);">핵심 기능 구현이 막혔을 때 포기 대신 "일정 관리"에서 "콘텐츠 발행 용이화"로 핵심 가치를 재정의하고 AI 초안 생성을 중심으로 재구성.</div>
+        <div class="sub-card sub-card--blue" style="margin-top:10px;">
+          <div class="small" style="font-weight:600;">기능이 아닌 목적 중심 의사결정</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 17 — WIREFRAME (체체)
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--surface);">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Wireframe</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--ink">Phase 0~2 완료 구현</span>
+    </div>
+    <div class="h2" style="text-align:center;margin-bottom:20px;">
+      <span class="hl-blue">URL 하나로</span> 시작해 <span class="hl-blue">AI 초안</span>으로 끝나는 흐름
+    </div>
+
+    <div style="display:flex;gap:18px;flex:1;align-items:flex-start;justify-content:center;">
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame" style="width:128px;">
+          <div class="mockup-phone__screen" style="min-height:200px;">(필요이미지: 소셜 로그인 화면 — 카카오·구글·애플 로그인 버튼)</div>
+        </div>
+        <div class="mockup-phone__caption">01 로그인</div>
+        <div class="small" style="text-align:center;color:var(--ink-sub);width:128px;font-size:11px;">소셜 로그인<br>3종 지원</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame" style="width:128px;">
+          <div class="mockup-phone__screen" style="min-height:200px;">(필요이미지: URL 붙여넣기 등록 화면 — 텍스트 입력창, 자동완성 미리보기)</div>
+        </div>
+        <div class="mockup-phone__caption">02 등록</div>
+        <div class="small" style="text-align:center;color:var(--ink-sub);width:128px;font-size:11px;">URL 파싱<br>30초 자동완성</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame" style="width:128px;">
+          <div class="mockup-phone__screen" style="min-height:200px;">(필요이미지: 월간 캘린더 화면 — 날짜별 체험 마커, 하단 리스트)</div>
+        </div>
+        <div class="mockup-phone__caption">03 캘린더</div>
+        <div class="small" style="text-align:center;color:var(--ink-sub);width:128px;font-size:11px;">월간·주간 뷰<br>6단계 상태 자동전이</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame" style="width:128px;">
+          <div class="mockup-phone__screen" style="min-height:200px;">(필요이미지: 당일 브리핑 푸시 알림 화면 — 아침 알림 카드, D-3 마감 알림)</div>
+        </div>
+        <div class="mockup-phone__caption">04 알림</div>
+        <div class="small" style="text-align:center;color:var(--ink-sub);width:128px;font-size:11px;">당일 브리핑<br>D-3 마감 알림</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="mockup-phone__frame" style="width:128px;">
+          <div class="mockup-phone__screen" style="min-height:200px;">(필요이미지: AI 리뷰 초안 생성 화면 — 생성 버튼, 초안 텍스트, 복사 버튼)</div>
+        </div>
+        <div class="mockup-phone__caption">05 AI 초안</div>
+        <div class="small" style="text-align:center;color:var(--ink-sub);width:128px;font-size:11px;">Claude API<br>30초 리뷰 초안</div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <div class="insight-bar insight-bar--ink">
+        선정 알림 → 일정 관리 → 당일 브리핑 → <span style="color:var(--yellow);">AI 리뷰 초안</span> — 체험단 전 과정을 하나의 흐름으로
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 18 — DECISION LOG (체체)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Decision Log</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--ink">1인 PO 판단</span>
+    </div>
+    <div class="h2" style="margin-bottom:18px;">
+      막혔을 때 <span class="hl-blue">포기가 아닌 재정의</span>로 돌파했다
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;flex:1;">
+      <div class="decision-row">
+        <div class="decision-row__num">01</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">핵심 기능 막혔을 때 포기 대신 본질 재정의</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">URL 파싱 한계에서 <span class="hl-blue">"일정 관리 집약화"</span>에서 <span class="hl-blue">"콘텐츠 발행 용이화"</span>로 핵심 가치 전환. 기능이 아닌 목적 중심.</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">02</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">완전하지 않은 서비스를 인정하고 빠른 출시 우선</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">1인 개발에서 완성도 추구보다 <span class="hl-blue">빠른 출시 + 피드백 수용</span>이 낫다고 판단. 이탈률 리스크를 감수하고 베타 형태로 먼저 출시.</div>
+          <div class="decision-row__trade">트레이드오프: 초기 이탈률 증가 감수</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">03</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">타겟을 2030 여성 크리에이터로 좁힌 이유</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">반응이 가장 빠르고 직접적인 그룹. <span class="hl-blue">좁고 뚜렷한 유저에게 먼저 검증</span>받는 것이 제품 개선 속도를 높인다고 판단.</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">04</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">스레드를 앱 개발과 병행한 이유</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">론칭 당일 사용자가 없는 상황을 방지. <span class="hl-blue">제품과 유저 채널을 동시에 키우는 구조</span>로 초기 사용자 확보.</div>
+        </div>
+      </div>
+      <div class="decision-row">
+        <div class="decision-row__num">05</div>
+        <div class="decision-row__content">
+          <div class="h4" style="font-size:14px;">Next.js 선택 — 실행 속도를 플랫폼 완성도보다 우선</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:3px;">앱 리패키징 경로를 발견해 <span class="hl-blue">초기 판단이 결국 효율적 경로</span>였음을 검증. 불확실성 속에서도 빠르게 실행.</div>
+          <div class="decision-row__trade">트레이드오프: 초기 네이티브 UX 희생</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar">
+        <span style="color:var(--yellow);">직접 사용자로 문제를 발견</span>하고, 1인으로 기획·개발·커뮤니티를 동시에 운영하며 출시까지 밀어붙인 실행력
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 19 — OUTCOME (체체)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Outcomes</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--orange">출시 전 · 목표 KPI</span>
+    </div>
+    <div class="h2" style="margin-bottom:6px;">
+      Phase 2 완료 — <span class="hl-blue">베타 론칭 준비 중</span>
+    </div>
+    <div class="small" style="color:var(--ink-sub);margin-bottom:16px;">출시 전 수치는 ○ 처리 · 목표치만 기재</div>
+
+    <!-- 진행 상황 바 -->
+    <div style="display:flex;gap:8px;margin-bottom:16px;">
+      <div style="flex:1;padding:10px 14px;background:var(--green-soft);border-radius:8px;border-left:3px solid var(--green);text-align:center;">
+        <div class="xs hl-green">완료</div>
+        <div class="small" style="font-weight:700;margin-top:2px;">Phase 0~2</div>
+        <div style="font-size:10px;color:var(--ink-mute);margin-top:2px;">기반 · 인증 · 캘린더</div>
+      </div>
+      <div style="flex:1;padding:10px 14px;background:var(--blue-soft);border-radius:8px;border-left:3px solid var(--blue);text-align:center;">
+        <div class="xs hl-blue">진행 중</div>
+        <div class="small" style="font-weight:700;margin-top:2px;">Phase 3~4</div>
+        <div style="font-size:10px;color:var(--ink-mute);margin-top:2px;">알림 · AI 매니저</div>
+      </div>
+      <div style="flex:1;padding:10px 14px;background:var(--surface);border-radius:8px;border-left:3px solid var(--line);text-align:center;">
+        <div class="xs" style="color:var(--ink-mute);">예정</div>
+        <div class="small" style="font-weight:700;margin-top:2px;">Phase 5~6</div>
+        <div style="font-size:10px;color:var(--ink-mute);margin-top:2px;">탐색 · 바이럴 · 런칭</div>
+      </div>
+    </div>
+
+    <!-- 목표 KPI 테이블 -->
+    <div style="flex:1;">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th style="text-align:left;">지표</th>
+            <th>현황</th>
+            <th class="cmp__hl-col">목표 (출시 1개월)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>가입자 수</td>
+            <td style="color:var(--ink-mute);">—</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">1,000명</strong></td>
+            <td>출시 전</td>
+          </tr>
+          <tr>
+            <td>URL 파싱 등록율</td>
+            <td style="color:var(--ink-mute);">—</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">40%</strong></td>
+            <td>출시 전</td>
+          </tr>
+          <tr>
+            <td>AI 초안 사전 알림 이메일</td>
+            <td style="color:var(--ink-mute);">—</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">100건</strong></td>
+            <td>유료 전환 의사 검증</td>
+          </tr>
+          <tr>
+            <td>D+7 리텐션</td>
+            <td style="color:var(--ink-mute);">—</td>
+            <td class="cmp__hl-col"><strong class="hl-blue">30%</strong></td>
+            <td>출시 전</td>
+          </tr>
+          <tr>
+            <td>리뷰 작성 시간</td>
+            <td>1~2시간</td>
+            <td class="cmp__hl-col"><strong class="hl-green">30초 (AI 초안)</strong></td>
+            <td>-90% 목표</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div class="insight-bar insight-bar--outline">
+        스레드 커뮤니티 기반 초기 유저 확보 병행 중 — <span class="hl-blue">제품과 채널을 동시에 키우는 구조</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 20 — LIMITS & NEXT STEPS (체체)
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Limits &amp; Next Steps</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--soft">PROJECT 02 마무리</span>
+    </div>
+    <div class="h2" style="margin-bottom:20px;">
+      지금도 <span class="hl-red">남아있는 한계</span>와<br>
+      <span class="hl-blue">론칭 이후 계획</span>
+    </div>
+
+    <div style="display:flex;gap:20px;flex:1;">
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <span class="pill pill--problem" style="align-self:flex-start;">현재 한계</span>
+        <div style="border-left:3px solid var(--red);padding:12px 16px;background:var(--red-soft);border-radius:0 10px 10px 0;">
+          <div class="h4" style="font-size:14px;color:var(--red);">1인 개발 체제 속도 한계</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">기능 개발 속도에 물리적 한계 존재. Phase 5~6 완료까지 추가 시간 필요.</div>
+        </div>
+        <div style="border-left:3px solid var(--orange);padding:12px 16px;background:var(--orange-soft);border-radius:0 10px 10px 0;">
+          <div class="h4" style="font-size:14px;color:var(--orange);">URL 파싱 완전 자동화 미완</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">일부 플랫폼 파싱 실패 시 수동 입력 필요. 사용자 경험 저하 요인.</div>
+        </div>
+        <div style="border-left:3px solid var(--ink-mute);padding:12px 16px;background:var(--surface);border-radius:0 10px 10px 0;">
+          <div class="h4" style="font-size:14px;">실제 유저 데이터 기반 검증 미완</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">출시 전이라 가설 기반 설계. 실제 사용 패턴과 차이 발생 가능성.</div>
+        </div>
+      </div>
+
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <span class="pill pill--blue" style="align-self:flex-start;">다음 단계</span>
+        <div class="card card--blue" style="padding:14px 16px;">
+          <div class="h4" style="font-size:14px;color:var(--blue);">Phase 3~4 완료 후 베타 론칭</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">웹 푸시 알림 + AI 리뷰 초안 구현 완료 후 스레드 커뮤니티 기반 첫 사용자 온보딩</div>
+        </div>
+        <div class="card card--blue" style="padding:14px 16px;">
+          <div class="h4" style="font-size:14px;color:var(--blue);">Next.js → 앱 리패키징</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">모바일 네이티브 경험 제공. 이미 확인한 리패키징 경로로 전환 작업 예정.</div>
+        </div>
+        <div class="card card--blue" style="padding:14px 16px;">
+          <div class="h4" style="font-size:14px;color:var(--blue);">스레드 기반 피드백 루프 구축</div>
+          <div class="small" style="color:var(--ink-sub);margin-top:5px;">초기 유저 확보 → 빠른 피드백 수집 → 제품 개선 반복. 커뮤니티와 제품을 함께 키우는 구조.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="insight-bar">
+        <span style="color:var(--yellow);">직접 불편함을 겪은 사람</span>이 만드는 제품 — 사용자 관점이 곧 제품 철학이다
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 21 — SKILLS & TOOLS
+     ════════════════════════════════════════ -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="section-tag">
+      <span class="section-tag__label">Skills &amp; Tools</span>
+      <span class="section-tag__line"></span>
+      <span class="pill pill--soft">사용 가능한 도구</span>
+    </div>
+    <div class="h2" style="margin-bottom:20px;">
+      <span class="hl-blue">AI 도구를 직접 다루고</span><br>
+      데이터로 판단하는 기획자
+    </div>
+
+    <div style="display:flex;gap:16px;flex:1;">
+
+      <!-- AI & 개발 도구 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+          <span class="pill pill--blue" style="font-size:11px;">AI · 개발</span>
+        </div>
+        <div class="card card--surface" style="padding:16px;">
+          <div class="h4" style="font-size:14px;margin-bottom:10px;">AI 도구</div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px;">
+            <span class="tool-tag tool-tag--blue">Claude API</span>
+            <span class="tool-tag tool-tag--blue">Claude Code</span>
+            <span class="tool-tag tool-tag--blue">Gemini API</span>
+            <span class="tool-tag tool-tag--blue">코덱스 (Codex)</span>
+            <span class="tool-tag tool-tag--blue">프롬프트 엔지니어링</span>
+          </div>
+        </div>
+        <div class="card card--surface" style="padding:16px;">
+          <div class="h4" style="font-size:14px;margin-bottom:10px;">개발 · 인프라</div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px;">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">Next.js 15</span>
+            <span class="tool-tag">Supabase</span>
+            <span class="tool-tag">Vercel</span>
+            <span class="tool-tag">Web Push API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 데이터 & 마케팅 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+          <span class="pill pill--soft" style="font-size:11px;">데이터 · 마케팅</span>
+        </div>
+        <div class="card card--surface" style="padding:16px;">
+          <div class="h4" style="font-size:14px;margin-bottom:10px;">데이터 분석</div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px;">
+            <span class="tool-tag tool-tag--blue">GA4</span>
+            <span class="tool-tag tool-tag--blue">에어브릿지 (Airbridge)</span>
+            <span class="tool-tag">안티그래비티</span>
+          </div>
+        </div>
+        <div class="card card--surface" style="padding:16px;">
+          <div class="h4" style="font-size:14px;margin-bottom:10px;">디자인 · 기획</div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px;">
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">Notion</span>
+          </div>
+        </div>
+        <!-- 자격증 -->
+        <div style="padding:14px 16px;background:var(--blue-soft);border-radius:12px;border:1.5px solid var(--blue);display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;flex-shrink:0;">자격</div>
+          <div>
+            <div class="h4" style="font-size:14px;color:var(--blue);">SQLD (SQL Developer)</div>
+            <div class="small" style="color:var(--ink-sub);margin-top:3px;">데이터베이스 설계 · 쿼리 작성 · 데이터 모델링</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 철학 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+          <span class="pill pill--ink" style="font-size:11px;">기획 철학</span>
+        </div>
+        <div style="flex:1;padding:20px;background:var(--ink);border-radius:14px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div class="small" style="color:rgba(255,255,255,0.4);margin-bottom:12px;letter-spacing:0.06em;">WHY I BUILD</div>
+            <div style="font-size:18px;font-weight:700;color:#fff;line-height:1.5;">
+              AI 가속화 시대,<br>
+              결국 남는 것은<br>
+              <span style="color:var(--yellow);">사람 사이의 유대감</span>
+            </div>
+          </div>
+          <div>
+            <div style="width:32px;height:2px;background:rgba(255,255,255,0.2);margin:16px 0;"></div>
+            <div class="small" style="color:rgba(255,255,255,0.6);line-height:1.7;">
+              사람들의 불편함을 해결해줌으로써<br>
+              <strong style="color:#fff;">기억되고 꾸준히 찾고 싶어지는</strong><br>
+              기획자로 남고 싶습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SLIDE 22 — CLOSING
+     ════════════════════════════════════════ -->
+<section class="slide" style="background:var(--blue-deep);">
+  <div class="slide-inner" style="justify-content:center;align-items:center;text-align:center;">
+
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;color:rgba(255,255,255,0.3);margin-bottom:32px;">CHALLENGE TO BE USEFUL.</div>
+
+    <div style="font-size:56px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:16px;">
+      사람들의 불편함을<br>
+      해결하며 <span style="color:var(--yellow);">기억되는</span><br>
+      기획자가 되겠습니다.
+    </div>
+
+    <div style="width:48px;height:2px;background:rgba(255,255,255,0.25);margin:20px auto;"></div>
+
+    <div style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:500px;">
+      AI 가속화 시대, 결국 남는 것은 사람 사이의 유대감.<br>
+      <strong style="color:#fff;">반복의 구조를 설계하고</strong>, 사람이 더 중요한 일에<br>
+      집중할 수 있게 만드는 제품을 만들겠습니다.
+    </div>
+
+    <div style="position:absolute;bottom:52px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:24px;">
+      <span style="font-size:11px;color:rgba(255,255,255,0.35);">◯◯◯</span>
+      <span style="font-size:11px;color:rgba(255,255,255,0.2);">|</span>
+      <span style="font-size:11px;color:rgba(255,255,255,0.35);">채널톡 AI Product Owner 지원</span>
+      <span style="font-size:11px;color:rgba(255,255,255,0.2);">|</span>
+      <span style="font-size:11px;color:rgba(255,255,255,0.35);">2026.04</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
