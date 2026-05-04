@@ -98,3 +98,19 @@
 | 2026-05-04 | Windows 11 | channeltalk-ai-po-202504-portfolio-v2.html 1단계 — CSS 전체(design2.md v4) + 슬라이드 01(Cover) + 02(Index) |
 | 2026-05-04 | Windows 11 | channeltalk-ai-po-202504-portfolio-v2.html 2단계 — P01 슬라이드 03(T3) + 04(T4-B) + 05(T5-A) + 06(T6) |
 | 2026-05-04 | Windows 11 | word.md → work.md 리네임 + 전체 작업 내역 업데이트 |
+| 2026-05-04 | Windows 11 | 채널톡 v2 P01 헤이딜러 자료 반영 — AI 판단 기준(Critical/Warning/Note), AI 자동 판단 vs 사람 검토 경계, 검증 루프, 실패 후 기준 개선 서사 업데이트 |
+
+---
+
+## 최근 반영 메모
+
+- `output/channeltalk-ai-po-202504/channeltalk-ai-po-202504-portfolio-v2.html`
+  - P01 Slide 07: 기존 솔루션 결정 3개를 `AI 판단 기준 설계` 중심으로 재구성
+  - P01 Slide 09: QA를 개발 이후가 아니라 설계 단계의 출시 조건으로 이동시킨 AX/PO 의사결정 서사 반영
+  - P01 Slide 10: Outcome 하단 정성 카드에 AI 판단 기준, 전수 검증 루프, 실패 후 기준 개선 반영
+- 헤이딜러 프로젝트 추가 근거
+  - AI 판단 기준: Critical / Warning / Note
+  - 자동 처리: 문자열 일치, 타입 정의, 함수 분기 존재 여부, 심각도 초안 분류
+  - 사람 검토: Critical 경계, 파트너 협의, 비즈니스 의미 왜곡 여부
+  - 검증 방식: 실제 파일 라인 확인, grep 재스캔, TypeScript 타입 체계 검토
+  - 실패 개선: handleDocumentUpdate 누락, C03 심각도 오분류, docx 스크립트 괄호 오류 대응
